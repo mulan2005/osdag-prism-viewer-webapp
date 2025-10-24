@@ -1,0 +1,141 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --bg: #071022;
+  --card: #0b1220;
+  --accent: #06b6d4;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, Arial, Helvetica, sans-serif;
+}
+
+/* Global layout */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, #071022 0%, #07142a 100%);
+  color: #e6eef6;
+}
+
+.app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header.app-header {
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.app-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+.tagline {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Layout areas */
+.app-main {
+  display: flex;
+  flex: 1;
+}
+.sidebar {
+  width: 340px;
+  padding: 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.03);
+}
+.viewer-area {
+  flex: 1;
+  padding: 12px;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Plugins */
+.plugin-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.plugin-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.01);
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+.button {
+  background: var(--accent);
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #042027;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.button:hover:not(:disabled) {
+  background: #0dd0e8;
+}
+.button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: transparent;
+  color: inherit;
+}
+
+/* Viewer */
+.viewer-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
